@@ -11,7 +11,7 @@ function Home() {
     <div> 
       <TopNavigation></TopNavigation>
       <h1>hello {dataFromStore.loginDetails.firstName} {dataFromStore.loginDetails.lastName}</h1> 
-      <img src={`http://localhost:7777/${dataFromStore.loginDetails.image}`}></img>
+      <img src={`/${dataFromStore.loginDetails.image}`}></img>
     </div> 
 
   )

@@ -31,7 +31,7 @@ function Login() {
             
         };
 
-        let JSONData = await fetch("http://localhost:7777/validateToken", reqOptions);
+        let JSONData = await fetch("/validateToken", reqOptions);
         let JSOData = await JSONData.json();
         console.log(JSOData); 
             if (JSOData.status == "failure") {
@@ -54,7 +54,7 @@ function Login() {
             body: dataToSend,
         }; 
 
-        let JSONData = await fetch("http://localhost:7777/validatelogin", reqOptions);
+        let JSONData = await fetch("/validatelogin", reqOptions);
         let JSOData = await JSONData.json();  
         console.log(JSOData);
         if (JSOData.status == "failure") {

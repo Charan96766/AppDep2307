@@ -31,7 +31,7 @@ function SignUP() {
             body:dataToSend,
         } 
 
-        let JSONData = await fetch("http://localhost:7777/update", reqOptions);
+        let JSONData = await fetch("/update", reqOptions);
         let JSOData = await JSONData.json();
         console.log(JSOData);
         if (JSOData.status == "success") {
