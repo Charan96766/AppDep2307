@@ -14,6 +14,8 @@ const bcrypt = require("bcrypt");
 app = express();
 app.use(cors()); 
 app.use('/uploads', express.static('uploads')); 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
 
 
 let connectToDb = async(req,res) => {
